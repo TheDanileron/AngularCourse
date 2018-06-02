@@ -6,13 +6,13 @@ import { AppComponent } from './app.component';
 
 
 @NgModule({
-  declarations: [
+  declarations: [ // The components, directives, and pipes that belong to this NgModule.
     AppComponent
   ],
-  imports: [
+  imports: [ // Other modules whose exported classes are needed by component templates declared in this NgModule.
     BrowserModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]//Точка запуска
+  providers: [], // Creators of services that this NgModule contributes to the global collection of services;
+  bootstrap: [AppComponent]// Точка запуска
 })
 export class AppModule { }
