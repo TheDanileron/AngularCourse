@@ -4,11 +4,13 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import { TestComponent } from './test/test.component';
+import { HeroChildComponent } from './hero-child/hero-child.component';
+import { HeroParentComponent } from './hero-parent/hero-parent.component';
 
 
 @NgModule({
     declarations: [ // The components, directives, and pipes that belong to this NgModule.
-        AppComponent, TestComponent
+        AppComponent, TestComponent, HeroChildComponent, HeroParentComponent
     ],
     imports: [ // Other modules whose exported classes are needed by component templates declared in this NgModule.
         BrowserModule
