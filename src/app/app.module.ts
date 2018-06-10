@@ -4,11 +4,12 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import { TestComponent } from './test/test.component';
+import { HighlightDirective } from './highlight.directive';
 
 
 @NgModule({
     declarations: [ // The components, directives, and pipes that belong to this NgModule.
-        AppComponent, TestComponent
+        AppComponent, TestComponent, HighlightDirective
     ],
     imports: [ // Other modules whose exported classes are needed by component templates declared in this NgModule.
         BrowserModule
