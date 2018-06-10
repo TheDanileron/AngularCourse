@@ -1,7 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
-
 import {AppComponent} from './app.component';
 import {TestComponent} from './test/test.component';
 import {HeroChildComponent} from './hero-child/hero-child.component';
@@ -10,6 +9,12 @@ import {CountdownComponent} from './countdown/countdown.component';
 import {MissionControlComponent} from './mission-control/mission-control.component';
 import {AstronautComponent} from './astronaut/astronaut.component';
 import {RouterModule, Routes} from '@angular/router';
+import {AdDirective} from './ad.directive';
+import {AdBannerComponent} from './ad-banner.component';
+import {HeroJobAdComponent} from './hero-job-ad.component';
+import {HeroProfileComponent} from './hero-profile.component';
+
+
 
 const appRoutes: Routes = [
     {path: 'heroes', component: HeroParentComponent},
@@ -18,7 +23,17 @@ const appRoutes: Routes = [
 
 @NgModule({
     declarations: [ // The components, directives, and pipes that belong to this NgModule.
-        AppComponent, TestComponent, HeroChildComponent, HeroParentComponent, CountdownComponent, MissionControlComponent, AstronautComponent
+        AppComponent,
+        TestComponent,
+        HeroChildComponent,
+        HeroParentComponent,
+        CountdownComponent,
+        MissionControlComponent,
+        AstronautComponent,
+        AdDirective,
+        AdBannerComponent,
+        HeroJobAdComponent,
+        HeroProfileComponent
     ],
     imports: [ // Other modules whose exported classes are needed by component templates declared in this NgModule.
         BrowserModule,
@@ -26,7 +41,8 @@ const appRoutes: Routes = [
             appRoutes)
     ],
     providers: [], // Creators of services that this NgModule contributes to the global collection of services;
-    bootstrap: [AppComponent]// Точка запуска, загружает AppComponent
+    bootstrap: [AppComponent], // Точка запуска, загружает AppComponent,
+    entryComponents: [ HeroJobAdComponent, HeroProfileComponent ],
 })
 export class AppModule {
 }
