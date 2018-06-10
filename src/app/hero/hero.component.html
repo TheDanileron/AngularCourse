@@ -1,0 +1,27 @@
+<p>
+    A pipe takes in data as input and transforms it to a desired output. In this page, you'll use pipes to transform a
+    component's birthday property into a human-friendly date.
+</p>
+<p>
+    This hero was born in {{birthDate | date}}
+</p>
+<p>
+    A pipe can accept any number of optional parameters to fine-tune its output. To add parameters to a pipe, follow the
+    pipe name with a colon ( : ) and then the parameter value (such as currency:'EUR')
+</p>
+<p>
+    This hero was born in {{birthDate | date:"MM/yyyy"}}
+</p>
+<p>
+    This hero only accepts donations in {{heroCurreny | currency:"EUR"}}
+</p>
+<p>
+    You can write your own custom pipes. Here's a custom pipe named ExponentialStrengthPipe that can boost a hero's
+    powers:
+</p>
+<p>
+    Hero power is {{heroPower}}
+    Boosted Hero power is {{heroPower | exponentialStrength: boostAbility}}
+</p>
+
+And here is an example of array filtering Pipe

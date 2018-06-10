@@ -4,21 +4,15 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<!--There are three kinds of directives in Angular:-->
 
-<!--Components—directives with a template.-->
-<!--Structural directives—change the DOM layout by adding and removing DOM elements.-->
-<!--Attribute directives—change the appearance or behavior of an element, component, or another directive.-->
-<!--Components are the most common of the three directives. You saw a component for the first time in the QuickStart guide.-->
+<app-hero></app-hero>
 
-<!--Structural Directives change the structure of the view. Two examples are NgFor and NgIf. Learn about them in the Structural Directives guide.-->
+<input name="name" #filter [(ngModel)]="filterStr" placeholder="Hero Name">
+<h1> Filter : {{filterStr}}</h1>
 
-<!--Attribute directives are used as attributes of elements. The built-in NgStyle directive in the Template Syntax guide, for example, can change several element styles at the same time.-->
-<h4>Pick a highlight color</h4>
-<div>
-  <input type="radio" name="colors" (click)="color='lightgreen'">Green
-  <input type="radio" name="colors" (click)="color='yellow'">Yellow
-  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+<div *ngFor="let hero of heroes | nameFilterPipe: filterStr">
+  <div class="card">
+    <h1>{{hero.name}}</h1>
+    <p>Hero power is {{hero.heroPower}}</p>
+  </div>
 </div>
-
-<p appHighlight [highlightColor]="color">Highlighted with parent component's color</p>

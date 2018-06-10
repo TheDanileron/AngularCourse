@@ -4,15 +4,18 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import { TestComponent } from './test/test.component';
-import { HighlightDirective } from './highlight.directive';
-
+import { HeroComponent } from './hero/hero.component';
+import {ExponentialStrengthPipe} from './ExponentialStrengthPipe';
+import {NameFilterPipe} from './NameFilterPipe';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
     declarations: [ // The components, directives, and pipes that belong to this NgModule.
-        AppComponent, TestComponent, HighlightDirective
+        AppComponent, TestComponent, HeroComponent, ExponentialStrengthPipe, NameFilterPipe
     ],
     imports: [ // Other modules whose exported classes are needed by component templates declared in this NgModule.
-        BrowserModule
+        BrowserModule,
+        FormsModule
     ],
     providers: [], // Creators of services that this NgModule contributes to the global collection of services;
     bootstrap: [AppComponent]// Точка запуска, загружает AppComponent
